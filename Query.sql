@@ -61,25 +61,53 @@ INSERT INTO Mark (SubID, StudentID, Mark, ExamTimes) VALUES
     (1, 2, 10, 2),
     (2, 1, 12, 1);
     
-SELECT * FROM Mark;
+SELECT 
+    *
+FROM
+    Mark;
 
 
 
 
 
-select * from Student;
+SELECT 
+    *
+FROM
+    Student;
 
-select * from Student where Status = true;
+SELECT 
+    *
+FROM
+    Student
+WHERE
+    Status = TRUE;
 
-select * from Subject where Credit < 10;
+SELECT 
+    *
+FROM
+    Subject
+WHERE
+    Credit < 10;
 
-select s.StudentID, s.StudentName, c.ClassName
-from Student s join Class c on s.ClassID = c.ClassID
-where c.ClassName = 'A1';
+SELECT 
+    s.StudentID, s.StudentName, c.ClassName
+FROM
+    Student s
+        JOIN
+    Class c ON s.ClassID = c.ClassID
+WHERE
+    c.ClassName = 'A1';
 
-select s.StudentID, s.StudentName, sub.SubName, m.Mark
-from Student s join Mark m on s.StudentID = m.StudentID join Subject sub on m.SubID = sub.SubID
-where sub.SubName = 'CF';
+SELECT 
+    s.StudentID, s.StudentName, sub.SubName, m.Mark
+FROM
+    Student s
+        JOIN
+    Mark m ON s.StudentID = m.StudentID
+        JOIN
+    Subject sub ON m.SubID = sub.SubID
+WHERE
+    sub.SubName = 'CF';
 
 
 
