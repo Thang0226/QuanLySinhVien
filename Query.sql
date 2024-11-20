@@ -106,7 +106,7 @@ FROM
     Mark m ON s.StudentID = m.StudentID
         JOIN
     Subject sub ON m.SubID = sub.SubID
-WHERE
+AND
     sub.SubName = 'CF';
 
 
